@@ -1,15 +1,16 @@
-// import logo from './logo.svg';
+import React from 'react';
 import './App.css';
-import Navbar from './components/Navbar/Navbar';
-import Home from "./components/pages/Home"
+import Navbar from './components/Navbar';
 
 function App() {
   return (
- <>
- <div>
-    <Home/>
-  </div>
- </>
+    <div className="App">
+      <Navbar />
+      <section className="home">
+      </section>
+      <div style={{ height: '1000px' }}>
+      </div>
+    </div>
   );
 }
 

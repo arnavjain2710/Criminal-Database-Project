@@ -1,24 +1,47 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react';
+import './Navbar.css';
 
-export default function Navbar() {
+function Navbar() {
+  const [scrolling, setScrolling] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setScrolling(true);
+      } else {
+        setScrolling(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
-    <>
-        <nav className="navbar navbar-expand-lg navbar-light bg-light my-2">
-        <div className="container-fluid">
-            <a className="navbar-brand" href="#">Navbar</a>
-            <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span className="navbar-toggler-icon"></span>
-            </button>
-            <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div className="navbar-nav">
-                <a className="nav-link active" aria-current="page" href="#">Home</a>
-                <a className="nav-link" href="#">Features</a>
-                <a className="nav-link" href="#">Pricing</a>
-                <a className="nav-link disabled" href="#" aria-disabled="true">Disabled</a>
-            </div>
-            </div>
+    <nav className={`nav ${scrolling ? 'affix' : ''}`}>
+      <div className="container">
+        <div className="logo">
+          <a href="#">Your Logo</a>
         </div>
-        </nav>
-    </>
-  )
+        <div id="mainListDiv" className="main_list">
+          <ul className="navlinks">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <span className="navTrigger">
+          <i></i>
+          <i></i>
+          <i></i>
+        </span>
+      </div>
+    </nav>
+  );
 }
+
+export default Navbar;

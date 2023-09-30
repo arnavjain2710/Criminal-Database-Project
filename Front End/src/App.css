@@ -1,0 +1,14 @@
+.app{
+  display: flex;
+  background-color: black;
+}
+
+.left-section{
+  flex: 75%;
+  background-color: black;
+}
+
+.right-section{
+  flex: 25%;
+  color: black;
+}

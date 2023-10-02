@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,700');
+
 html,
 body {
     margin: 0;
@@ -8,8 +9,6 @@ body {
     font-size: 62.5%;
     font-size: 10px;
 }
-/*-- Inspiration taken from abdo steif -->
-/* --> https://codepen.io/abdosteif/pen/bRoyMb?editors=1100*/
 
 /* Navbar section */
 
@@ -19,6 +18,8 @@ body {
     position: fixed;
     line-height: 65px;
     text-align: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust the alpha value (0.5) for translucency */
+    top: 0; /* Position the navbar at the top of the webpage */
 }
 
 .nav div.logo {
@@ -76,8 +77,13 @@ body {
 .home {
     width: 100%;
     height: 100vh;
-    /* background-image: url(https://images.unsplash.com/photo-1498550744921-75f79806b8a7?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b0f6908fa5e81286213c7211276e6b3d&auto=format&fit=crop&w=1500&q=80); */
+    background-image: url(image.jpg);
     background-color: #111;
+    background-position: center center; /* Center the background image horizontally and vertically */
+    background-size: cover; /* Scale the background image to cover the entire div */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
 }
 
 .navTrigger {
@@ -85,10 +91,10 @@ body {
 }
 
 .nav {
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     -webkit-transition: all 0.4s ease;
-    transition: all 0.4s ease;
+    transition: all 0.3s ;
 }
 
 
@@ -337,13 +343,9 @@ body {
 
 .affix {
     padding: 0;
-    background-color: #111;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(15px);
 }
-
-
-
-
-
 
 .myH2 {
 	text-align:center;

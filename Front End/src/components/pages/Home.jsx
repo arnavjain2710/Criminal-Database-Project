@@ -24,7 +24,7 @@ function Home() {
     <nav className={`nav ${scrolling ? 'affix' : ''}`}>
       <div className="container">
         <div className="logo">
-          <a href="#">Your Logo</a>
+          <a href="#">WikiCrime</a>
         </div>
         <div id="mainListDiv" className="main_list">
           <ul className="navlinks">

@@ -1,14 +1,16 @@
-.app{
+/* The container for the entire page */
+.app {
   display: flex;
-  background-color: black;
 }
 
-.left-section{
-  flex: 75%;
-  background-color: black;
+/* Container for the left (70%) part of the crimes-news-section */
+.crimes-news-section {
+  display: flex;
+  height: 1000px;
 }
 
-.right-section{
-  flex: 25%;
-  color: black;
+/* Your links section (unaffected by the split) */
+.links-section {
+  background-color: rgb(26, 51, 86);
+  height: 1000px;
 }

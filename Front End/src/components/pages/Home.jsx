@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import './Navbar.css';
+import './home.css';
 
-function Navbar() {
+function Home() {
   const [scrolling, setScrolling] = useState(false);
 
   useEffect(() => {
@@ -29,8 +29,9 @@ function Navbar() {
         <div id="mainListDiv" className="main_list">
           <ul className="navlinks">
             <li><a href="#">About</a></li>
-            <li><a href="#">Portfolio</a></li>
             <li><a href="#">Services</a></li>
+            <li><a href='#'>Helpline</a></li>
+            <li><a href='#'>Useful Links</a></li>
             <li><a href="#">Contact</a></li>
           </ul>
         </div>
@@ -44,4 +45,4 @@ function Navbar() {
   );
 }
 
-export default Navbar;
+export default Home;

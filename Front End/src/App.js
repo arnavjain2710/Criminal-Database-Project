@@ -1,14 +1,16 @@
 import React from 'react';
 import './App.css';
-import Navbar from './components/Navbar';
+import Home from './components/pages/Home';
 
 function App() {
   return (
     <div className="App">
-      <Navbar />
       <section className="home">
+      <Home />
       </section>
-      <div style={{ height: '1000px' }}>
+      <div className='crimes-news-section'>
+      </div>
+      <div className='links-section'>
       </div>
     </div>
   );

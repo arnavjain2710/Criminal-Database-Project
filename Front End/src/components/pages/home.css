@@ -112,6 +112,8 @@ body {
     }
     .nav div.logo {
         margin-left: 15px;
+        font-weight:bold;
+        font-size: 2.5remx;
     }
     .nav div.main_list {
         width: 100%;

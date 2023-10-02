@@ -23,16 +23,17 @@ function Home() {
   return (
     <nav className={`nav ${scrolling ? 'affix' : ''}`}>
       <div className="container">
-        <div className="logo">
+        <div className="logo" style={{fontWeight:'bold'}}>
           <a href="#">WikiCrime</a>
         </div>
         <div id="mainListDiv" className="main_list">
           <ul className="navlinks">
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="#">Prison</a></li>
             <li><a href='#'>Helpline</a></li>
-            <li><a href='#'>Useful Links</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href='#'>Search</a></li>
+            <li><a href="#">Log In</a></li>
           </ul>
         </div>
         <span className="navTrigger">

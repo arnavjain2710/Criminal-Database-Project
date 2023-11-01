@@ -1,0 +1,121 @@
+html {
+    scroll-behavior: smooth;
+  }
+.navbar{
+    position: fixed;
+    width: 100%;
+    height: 75px;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.80);
+    font-family: 'Poppins', sans-serif;
+    
+}
+.navbarli{
+    font-family: 'Poppins', sans-serif;
+}
+.logoimg{
+    position: relative;
+    top: -8px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    padding-left: 2rem;
+}
+
+.headername{
+    margin-left: 50px;
+    color: aqua;
+}
+
+.navnamenlogo{
+    display: flex;
+
+}
+
+.Name{
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+    padding-left: 1rem;
+    
+}
+.navul{
+    text-decoration: none;
+    list-style: none;
+    color: white;
+    display: flex;
+    padding-left: 440px;
+    margin-top: 15px;
+    align-items: center;
+    justify-content: center;
+}
+.navbarli{
+    text-decoration: none;
+    list-style: none;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    padding-right: 60px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+
+.navbari{
+    text-decoration: none;
+    list-style: none;
+    color:white;
+    transition: 0.5s;
+    font-size: 20px;
+    font-weight: 200;
+}
+.navbari:hover{
+    color: red;
+}
+
+
+ 
+@media(max-width:1000px){
+    .navbar{
+        width: 100%;
+        height: 290px;
+        justify-content: flex-start;
+      
+    }
+    .logoimg{
+        width: 21rem;
+    }
+    .navul{
+        margin-left: 100px;
+        padding-left: 0px;
+        /* font-size: 5rem; */
+    }
+    .navbarli{
+        padding-top: 20px;
+        /* font-size: 45px; */
+        /* font-size: 5rem; */
+    }
+    .navbari{
+        font-size: 2.5rem;
+    }
+    .usernameo{
+        font-size: 35px;
+    }
+    
+    .logoutnname{
+       margin-top: 8rem;
+        position: fixed;
+        right: 5rem;
+        /* font-size: 3rem; */
+    }
+    #na1{
+        font-size: 3rem;
+    }
+    #na2{
+         width:6rem; border-radius:50%;
+         height: 6rem; 
+    }
+}
+

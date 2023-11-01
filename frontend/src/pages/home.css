@@ -1,0 +1,475 @@
+html {
+    scroll-behavior: smooth;
+  }
+  .home{
+    background-color: black;
+  }
+  
+  
+  .contone{
+    color: white;
+    content: "";
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(rgba(0, 0, 0, 0.255), rgba(0, 0, 0, 0.737)), url('./imageHome.jpg') no-repeat center center/cover;
+    height: 865px;
+    width: 100%;
+    background-attachment: fixed;
+   
+  }
+  
+  
+  .contonecont{
+    padding-top: 210px;
+    padding-left: 100px;
+    transition: 0.5s;
+  }
+  .contonecont:hover{
+    transform: skew(1.1, 1.1);
+  }
+  .lonetit{
+    padding-left: 28rem;
+    font-weight: 200;
+    font-size: 40px;
+  }
+  .lonecontent{
+    width: 533px;
+    font-weight: 300;
+    font-size: 15px;
+    padding-left: 28rem;
+  }
+
+  
+  .conttwocont{
+  font-family: 'Poppins', sans-serif;
+    padding-top: 250px;
+    padding-left: 540px;
+  }
+  
+  
+  .arrowright{
+    margin-top: 6px;
+    margin-left: 15px;
+    font-size: 25px;
+    transition: 0.5s;
+  }
+  .clicknow{
+    cursor: pointer;
+    color: red;
+    font-size: 20px;
+    font-family: 'Prompt', sans-serif;
+    transition: 0.5s;
+  }
+  
+  .clicknow:hover{
+    padding-left: 3px;
+  }
+  .clicknow:hover > .arrowright{
+    transform:translateX(5px)
+  }
+  
+  .contthreecont{
+    /* justify-content: center;
+    align-items: center; */
+    color: rgb(234, 234, 225);
+    background-color: rgb(31, 31, 31);
+    margin-top: 200px;
+    padding-bottom: 10px;
+    padding-top: 50px;
+  }
+  .contthreeboximg{
+    margin-top: 10px;
+    width: 189px;
+    border-radius: 10px;
+    transition: 0.5s;
+  }
+  
+  .idli{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 31px;
+    font-weight: 700;
+   
+  }
+  .imlimli{
+    color: rgb(194, 194, 185);
+    font-family: 'Quicksand', sans-serif;
+    font-size: 16px;
+    font-weight: 100;
+    margin-left: 196px;
+    transition: 0.5s;
+  }
+  .idlidli:hover{
+    cursor: pointer;
+    color: red;
+  }
+  .contthreecontainer{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: 120px;
+    margin-right: 120px;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    
+  }
+  .contthreebox{
+    justify-content: center;
+    align-items: center;
+    /* display: flex;
+    flex-direction: column; */
+    margin-left: 10px;
+    border-radius: 8px;
+    padding-bottom: 19px;
+    background-color: rgb(45,45,45);
+  }
+  .cthrevecou{
+    font-size:11px; color:gray
+  }
+  .countryname{
+    font-size: 15px;
+  }
+  
+  .icon{
+    color: green;
+    font-size: 20px;
+    outline: none;
+    border: none;
+  }
+  
+  .main-scroll-div{
+    margin-top: 56px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .cover{
+    width: 90%;
+    height: 50%;
+    position: relative;
+  }
+  .trendcont{
+    display: flex;
+    height: 500px;
+    width: 100%;
+    justify-content: left;
+    align-items: center;
+    overflow: auto;
+    position: relative;
+    scroll-behavior:smooth;
+  }
+  .trendbox{
+    min-width: 350px;
+    height: 335px;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  .trendboximg::-webkit-scrollbar{
+    -webkit-appearance: none;
+  }
+  .trendboximg{
+    border-radius: 10px;
+    height: 150px;
+    width: 230px;
+  }
+  
+  .headerSearch {
+    height: 30px;
+    background-color: white;
+    border: 3px solid #febb02;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px 0px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: -25px;
+    width: 100%;
+    max-width: 1024px;
+  }
+  
+  .headerIcon {
+    color: lightgray;
+  }
+  
+  .headerSearchItem {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .headerSearchInput {
+    border: none;
+    outline: none;
+  }
+  
+  .headerSearchText {
+    color: lightgray;
+    cursor: pointer;
+  }
+  
+  .date {
+    position: absolute;
+    top: 50px;
+    z-index: 2;
+  }
+  
+  .options {
+    z-index: 2;
+    position: relative;
+    background-color: white;
+    color: gray;
+    border-radius: 5px;
+    margin-right: 1230px;
+    -webkit-box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.4);
+  }
+  
+  .optionItem {
+    width: 210px;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+  }
+  
+  .optionCounter {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+    color: black;
+  }
+  
+  .optionCounterButton {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #0071c2;
+    color: #0071c2;
+    cursor: pointer;
+    background-color: white;
+  }
+  
+  .optionCounterButton:disabled {
+    cursor: not-allowed;
+  }
+  
+  
+  /* searchbar after genrebox  */
+  #searchbox{
+    margin-left:560px; padding-top:60px; width:500px;
+  }
+  .input-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .input {
+    font-family: 'Prompt', sans-serif;
+    min-height: 50px;
+    width: 290px;
+    padding: 0 1rem;
+    color: #f3f3f3;
+    font-size: 15px;
+    border: 1px solid #880000;
+    border-radius: 6px 0 0 6px;
+    background-color:#00000075;
+  }
+  #Email{
+    background-color: rgba(0, 0, 0, 0.341);
+  }
+  #Email::placeholder{
+    color: rgb(149, 148, 148);
+    font-weight: 300;
+  }
+  .button--submit {
+    min-height: 50px;
+    padding: .5em 1em;
+    border: none;
+    border-radius: 0 6px 6px 0;
+    background-color: #800000;
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color .3s ease-in-out;
+  }
+  
+  .button--submit:hover {
+    background-color: #ff0000;
+  }
+  
+  .input:focus, .input:focus-visible {
+    border: 2px solid red;
+    border-color: #ff0000;
+    outline: none;
+  }
+  
+  .ltwotit{
+    color: white;
+    font-size: 65px;
+  }  
+  .ltwocontent{
+    display: flex;
+    color: white;
+    width: 610px;
+    margin-top: 40px;
+    font-size: 15px;
+  }
+  
+  
+  .clicknoq:hover{
+    padding-left: 3px;
+  }
+  .clicknoq:hover > .arrowright{
+    transform:translateX(5px)
+  }
+  .clicknoe{
+    cursor: pointer;
+    color: rgb(192 255 57);
+    font-size: 20px;
+    font-family: 'Prompt', sans-serif;
+    transition: 0.5s;
+  }
+  
+  .clicknoe:hover{
+    padding-left: 3px;
+  }
+  .clicknoe:hover > .arrowright{
+    transform:translateX(5px)
+  }
+  
+  /* RESPONSIVE DESIGN */
+  @media (max-width: 1000px){
+    .contone{
+      padding-top: 154px;
+      height: 3000px;
+      width: 340%;
+    }
+    .contonecont {
+      padding-top: 384px;
+    }
+    .lonetit{
+      font-size: 150px;
+    }  
+    .lonecontent{
+      width: 850px;
+      margin-top: 40px;
+      font-size: 50px;
+    }
+    .clicknow{
+      padding-left: 70px;
+      padding-top: 40px;
+      font-size: 50px;
+    }
+    .input{
+      margin-left: 5px;
+      width: 731px;
+      height: 176px;
+      font-size: 40px;
+      font-weight: 400;
+      color: white;
+    }
+    .button--submit{
+      height: 150px;
+      width: 183px;
+      font-size: 34px;
+    }
+    .idli{
+      font-size: 70px;
+      padding-top: 50px;
+    }
+    .imlimli{
+      font-size: 3rem;
+      margin-left: 25px;
+    }
+  
+    /* CONTTHREECONT */
+    .contthreecont{
+  
+      width: 340%;
+      height: 100%;
+    }
+    .contthreebox{
+      margin: 13px;
+      width: 438px;
+      height: 440px;
+      border-radius: 50px;
+    }
+    .contthreeboximg{
+      width:436px;
+      border-radius: 50px;
+    }
+    .findnewevents{
+      text-align: center;
+    }
+    .cthrevecou{
+      font-size: 35px;
+    }
+    .countryname{
+      margin-bottom: 10px;
+      font-size: 50px;
+    }
+    .trendbox{
+      min-width: 500px;
+      height: 625px;
+    }
+    .trendboximg{
+      height: 240px;
+      width: 430px;
+    }
+    .trendboxcont{
+      font-size: 40px;
+    }
+  
+    /* GENRECONTAINER */
+    .genrebox{
+      height: 300px;
+      width: 360px;
+      margin-bottom: 100px;
+      border-radius: 50px;
+    }
+    .genreicon{
+      font-size: 5em;
+    }
+    .genrename{
+      font-size: 50px;
+    }
+  
+    /* CONTTWO */
+    .conttwo{
+      height: 2300px;
+      width: 340%;
+      padding-bottom: 100px;
+    }
+    .ltwotit{
+      color: white;
+      font-size: 120px;
+    }  
+    .ltwocontent{
+      display: flex;
+      color: white;
+      width: 820px;
+      margin-top: 40px;
+      font-size: 50px;
+    }
+    .clicknoq{
+      padding-left: 70px;
+      padding-top: 40px;
+      font-size: 50px;
+    }
+  
+    /* CONTFOUR */
+    .contfour{
+      height: 1600px;
+      width: 340%;
+      margin-top: 900px;
+    }
+   
+    /* FOOTER */
+    .footer{
+      margin-top: 1000px;
+      z-index: 9;
+    }
+  }

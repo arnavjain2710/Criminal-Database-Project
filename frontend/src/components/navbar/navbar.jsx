@@ -19,7 +19,7 @@ function Navbar() {
         <ul className="navul">
           <li className='navbarli'><a className="navbari" href = "/">Home</a></li>
           <li className='navbarli'><a className="navbari" href = "/search" >Search Record</a></li>
-          <li className='navbarli'><a className="navbari" href = "/list">News</a></li>        
+          <li className='navbarli'><a className="navbari" href = "/news">News</a></li>        
           <li className='navbarli'><a className="navbari" href = "/complaint">Register Complaint</a></li>        
           <li className='navbarli'><a className="navbari"href = "/AboutUs">Login</a></li>
         </ul>

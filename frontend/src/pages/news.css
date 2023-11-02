@@ -1,5 +1,4 @@
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
   }
@@ -116,7 +115,7 @@
       color: #555;
   }
   
-  @media screen and (max-width: 1330px){
+  /* @media screen and (max-width: 1330px){
       html{
           font-size: 14px;
       }
@@ -129,4 +128,4 @@
       .news-grid{
           grid-template-columns: 1fr;
       }
-  }
+  } */

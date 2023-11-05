@@ -8,7 +8,7 @@ import f from '../../pages/imageHome.jpg';
 
 
 
-export default function Upcoming() {
+export default function Upcoming(props) {
 
   return (
     <div className="contthreecontainer idli">
@@ -23,7 +23,7 @@ export default function Upcoming() {
       <div className="contthreebox"><a href="/event/location/Australia"><img src={e} className="contthreeboximg" ></img></a>
         <h5 className="cthrevecou">  events</h5><b className='countryname' >Australia</b></div>
       <div className="contthreebox"><a href="/event/location/Japan"><img src={f} className="contthreeboximg" ></img></a>
-        <h5 className="cthrevecou"></h5><b className='countryname' >Japan</b></div>
+        <h5 className="cthrevecou">events</h5><b className='countryname' >Japan</b></div>
     </div>
   )
 

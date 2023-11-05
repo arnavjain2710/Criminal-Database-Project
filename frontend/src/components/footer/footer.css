@@ -1,12 +1,13 @@
 .footer{
     background-color: black;
-    margin-top: 416px;
+    margin-top: 300px;
     font-family: 'Poppins', sans-serif;
 }
 .footercontent{
     padding-bottom: 90px;
     padding-top: 50px;
     font-family: 'Poppins', sans-serif;
+    display: block;
 }
 
 .wer{
@@ -17,7 +18,7 @@
 }
 .title{
     color: rgb(142, 141, 141);
-    font-size: 23px;
+    font-size: 20px;
     border-bottom: 1px solid gray;
     margin-bottom: 25px;
 }

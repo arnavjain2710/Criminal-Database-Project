@@ -1,6 +1,7 @@
 html {
     scroll-behavior: smooth;
-  }
+}
+
 .navbar{
     position: fixed;
     width: 100%;
@@ -9,20 +10,23 @@ html {
     display: flex;
     flex-direction: row;
     z-index: 2;
-    background: rgba(0, 0, 0, 0.80);
+    background: rgba(0, 0, 0, 0.50);
     font-family: 'Poppins', sans-serif;
-    
+    backdrop-filter: blur(10px);
 }
+
 .navbarli{
     font-family: 'Poppins', sans-serif;
 }
+
 .logoimg{
     position: relative;
     top: -8px;
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     padding-left: 2rem;
+    padding-top: 15%;
 }
 
 .headername{
@@ -32,26 +36,27 @@ html {
 
 .navnamenlogo{
     display: flex;
-
 }
 
 .Name{
     color: white;
     font-weight: bold;
     font-size: 1.5rem;
-    padding-left: 1rem;
-    
+    padding-left: 1.5rem;
+    padding-top: 12%;
 }
+
 .navul{
     text-decoration: none;
     list-style: none;
     color: white;
     display: flex;
-    padding-left: 440px;
+    padding-left: 700px;
     margin-top: 15px;
     align-items: center;
     justify-content: center;
 }
+
 .navbarli{
     text-decoration: none;
     list-style: none;
@@ -71,6 +76,7 @@ html {
     font-size: 20px;
     font-weight: 200;
 }
+
 .navbari:hover{
     color: red;
 }

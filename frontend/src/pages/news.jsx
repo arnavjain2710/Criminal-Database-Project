@@ -18,7 +18,7 @@ const NewsPage = () => {
             <Navbar />
             <div className='content'>
                 <div className='main-area'>
-                    <h1 className='title'>See the Latest News</h1>
+                    <h1 className='new-title'>See the Latest News</h1>
                     {/* <Menu active={active} setActive={setActive} setCategory={setCategory} /> */}
                     <NewsGrid items={items}/>
                 </div>

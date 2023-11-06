@@ -3,6 +3,8 @@ import Navbar from '../components/navbar/navbar';
 import './search.css'
 import { useState } from 'react';
 import Footer from '../components/footer/footer';
+import axios from "axios";
+import CriminalCard from '../components/search/searchCard';
 
 
 const SearchPage = () => {
@@ -19,8 +21,15 @@ const SearchPage = () => {
     setFilters({ ...filters, [filterName]: value });
   };
 
-  const handleSearch = () => {
-    console.log('Filters:', filters);
+
+  const [criminalData , setCriminalData]=useState([]);
+
+  const handleSearch = async (e) => {
+    e.preventDefault();
+    console.log(filters);
+    const result= await axios.post("http://localhost:3000/allCriminals/byfilters",filters);
+    setCriminalData(result.data);
+    console.log(result);
   };
 
   return (
@@ -31,37 +40,42 @@ const SearchPage = () => {
       <div className="filter-container">
         <div className="filter-column">
           <div className="filter-section">
-            <label htmlFor="age">Age:</label>
+            <label htmlFor="age">Prison Name:</label>
             <input
               type="text"
-              id="age"
-              value={filters.age}
-              onChange={(e) => handleFilterChange('age', e.target.value)}
+              id="prison"
+              value={filters.prison}
+              onChange={(e) => handleFilterChange('prison', e.target.value)}
             />
           </div>
           <div className="filter-section">
-            <label htmlFor="gender">Gender:</label>
+            <label htmlFor="sentenceStatus">Sentence Status:</label>
             <select
-              id="gender"
-              value={filters.gender}
-              onChange={(e) => handleFilterChange('gender', e.target.value)}
+              id="sentenceStatus"
+              value={filters.sentenceStatus}
+              onChange={(e) => handleFilterChange('sentenceStatus', e.target.value)}
             >
-              <option value="">Select Gender</option>
-              <option value="Male">Male</option>
-              <option value="Female">Female</option>
+              <option value="">Select Sentence Status</option>
+              <option value="Open">Incarcerated</option>
+              <option value="Closed">Released</option>
             </select>
           </div>
-          {/* Add more filters to the first column */}
         </div>
         <div className="filter-column">
-          <div className="filter-section">
+        <div className="filter-section">
             <label htmlFor="crimeType">Crime Type:</label>
-            <input
-              type="text"
+            <select
               id="crimeType"
               value={filters.crimeType}
               onChange={(e) => handleFilterChange('crimeType', e.target.value)}
-            />
+            >
+              <option value="">Select Crime Type</option>
+              <option value="Robbery">Robbery</option>
+              <option value="Assault">Assault</option>
+              <option value="Drug Trafficing">Drug Trafficing</option>
+              <option value="Burglary">Burglary</option>
+              <option value="kidnapping">kidnapping</option>
+            </select>
           </div>
           <div className="filter-section">
             <label htmlFor="location">Location:</label>
@@ -72,7 +86,6 @@ const SearchPage = () => {
               onChange={(e) => handleFilterChange('location', e.target.value)}
             />
           </div>
-          {/* Add more filters to the second column */}
         </div>
         <div className="filter-column">
           <div className="filter-section">
@@ -84,22 +97,16 @@ const SearchPage = () => {
               onChange={(e) => handleFilterChange('name', e.target.value)}
             />
           </div>
-          <div className="filter-section">
-            <label htmlFor="sentenceStatus">Sentence Status:</label>
-            <select
-              id="sentenceStatus"
-              value={filters.sentenceStatus}
-              onChange={(e) => handleFilterChange('sentenceStatus', e.target.value)}
-            >
-              <option value="">Select Sentence Status</option>
-              <option value="Incarcerated">Incarcerated</option>
-              <option value="Released">Released</option>
-            </select>
-          </div>
+          
           {/* Add more filters to the third column */}
         </div>
       </div>
       <button onClick={handleSearch}>Search</button>
+    </div>
+    <div className="criminals-list">
+      {criminalData.map((criminal, index) => (
+        <CriminalCard key={index} data={criminal} />
+      ))}
     </div>
    <Footer/>
    </div>

@@ -22,6 +22,30 @@ export const getCriminalsByCrime = async (req, res, next) => {
 
     })
 };
+
+
+export const regComplaint = async (req, res, next) => {
+    try {
+      const qry = `INSERT INTO user_complaint (Name, Email, Complaint, Category, Severity) VALUES (?, ?, ?, ?, ?)`;
+      const values = [req.body.Name, req.body.Email, req.body.Complaint, req.body.Category, req.body.Severity];
+  
+      db.query(qry, values, (err, data) => {
+        if (err) {
+          console.log(err);
+          res.status(500).json({ error: 'Failed to insert complaint' });
+        } else {
+          res.json(data);
+        }
+      });
+    } catch (error) {
+      console.error(error);
+      res.status(500).json({ error: 'Failed to insert complaint' });
+    }
+  };
+  
+
+
+
 export const getCriminalsByPrison = async (req, res, next) => {
 
     const qry = "SELECT Criminals.first_name, Criminals.last_name,Crimes.crime_name, Prison.prison_name FROM Criminals JOIN Prison ON Criminals.prison_id=Prison.prison_id JOIN Crimes ON Criminals.crime_id=Crimes.crime_id WHERE Prison.prison_name='Tihar Jail' ";

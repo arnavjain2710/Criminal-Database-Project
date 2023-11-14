@@ -5,9 +5,11 @@ import Search from '../src/pages/Search'
 import { BrowserRouter as Router,Routes, Route, Link } from 'react-router-dom'; 
 import Complaint from './pages/complaint'
 import NewsPage from './pages/news';
+import ComplaintState from './context/complaint/ComplaintState';
 
 function App() {
   return (
+    <ComplaintState>
     <Router>   
         <Routes> 
                 <Route exact path='/' element={< Home />}></Route> 
@@ -16,6 +18,7 @@ function App() {
                 <Route exact path='/news' element={< NewsPage />}></Route>
         </Routes> 
     </Router> 
+    </ComplaintState>
   );
 }
 

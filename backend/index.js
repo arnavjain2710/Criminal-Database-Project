@@ -31,6 +31,6 @@ app.get("/", (req, res) => {
    res.send("jaldi waha se hato");
 })
 
-app.listen(3000, () => {
-    console.log("Server is runnig on port 3000!")
+app.listen(8000, () => {
+    console.log("Server is runnig on port 8000!")
 })

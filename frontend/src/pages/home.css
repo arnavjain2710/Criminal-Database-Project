@@ -295,13 +295,13 @@ html {
     border-radius: 6px 0 0 6px;
     background-color:#00000075;
   }
-  #Email{
+  /* #Email{
     background-color: rgba(0, 0, 0, 0.341);
   }
   #Email::placeholder{
     color: rgb(149, 148, 148);
     font-weight: 300;
-  }
+  } */
   .button--submit {
     min-height: 50px;
     padding: .5em 1em;

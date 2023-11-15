@@ -6,6 +6,7 @@ import { BrowserRouter as Router,Routes, Route, Link } from 'react-router-dom';
 import Complaint from './pages/complaint'
 import NewsPage from './pages/news';
 import ComplaintState from './context/complaint/ComplaintState';
+import AuthForm from './components/login/register/login';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
                 <Route exact path='/search' element={< Search />}></Route> 
                 <Route exact path='/complaint' element={< Complaint />}></Route> 
                 <Route exact path='/news' element={< NewsPage />}></Route>
+                <Route exact path='/login' element={< AuthForm />}></Route>
         </Routes> 
     </Router> 
     </ComplaintState>

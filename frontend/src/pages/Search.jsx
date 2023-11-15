@@ -27,7 +27,7 @@ const SearchPage = () => {
   const handleSearch = async (e) => {
     e.preventDefault();
     console.log(filters);
-    const result= await axios.post("http://localhost:3000/allCriminals/byfilters",filters);
+    const result= await axios.post("http://localhost:8000/allCriminals/byfilters",filters);
     setCriminalData(result.data);
     console.log(result);
   };

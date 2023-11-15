@@ -1,0 +1,58 @@
+/* Add this CSS to your component or a separate stylesheet */
+.main-contain{
+    margin-top: 10rem;
+}
+.form-container {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    text-align: center;
+    color: #333;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    margin-bottom: 5px;
+  }
+  
+  input {
+    padding: 8px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    border: 2px solid #bebebe;
+    border-radius: 3px;
+  }
+  
+  button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  .p {
+    text-align: center;
+    cursor: pointer;
+    color: #007bff;
+  }
+  
+  .p:hover {
+    text-decoration: underline;
+  }
+  

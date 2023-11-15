@@ -6,7 +6,7 @@
     margin-top: 10rem;
     margin-bottom: -2rem;
     padding: 20px;
-    border: 1px solid #ccc;
+    border: 1px solid #565555;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
@@ -20,11 +20,17 @@
     margin-bottom: 5px;
   }
   
-  input,
+  input{
+    width: 100%;
+    padding: 10px;
+    margin-right: 20px;
+    border: 2px solid #bebebe;
+    border-radius: 5px;
+  }
   textarea {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #646464;
     border-radius: 5px;
   }
   

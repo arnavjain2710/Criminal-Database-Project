@@ -42,7 +42,8 @@ label {
 input {
   width: 100%;
   padding: 10px;
-  border: 1px solid #ccc;
+  margin-right: 20px;
+  border: 2px solid #bebebe;
   border-radius: 5px;
 }
 
@@ -64,7 +65,7 @@ button:hover {
 select {
   width: 100%;
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 2px solid #bebebe;
   border-radius: 5px;
   margin-top: 5px; 
 }

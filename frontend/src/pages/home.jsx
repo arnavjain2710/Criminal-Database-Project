@@ -23,23 +23,8 @@ export default function Home() {
         </div>
         {/* SEARCHBAR */}
 
-
-        <div className="contthreecont">
-
-          {/* UPCOMING EVENTS */}
-          <br />
-
-          <span className='idli' style={{ color: "red", paddingLeft: 690 }} >FIND Latest News</span><br /><span className="imlimli" style={{ paddingLeft: 240 }}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus earum, esse quaerat consequatur ex distinctio?</span>
-          <Upcoming />
-          <a style={{ color: 'white', textDecoration: 'none' }} href="/Book"><span className="imlimli idlidli" >and more.... </span></a><br /><br /><br /><br /><br />
-        </div>
-        <div className='findnewevents' style={{ paddingTop: '70px', fontSize: '3em', paddingLeft: '137px', paddingRight: '30px' }}>
-          <span className='idli'>Other useful organisations of <span style={{ color: "red" }}>Government of India</span> </span><br />
-        </div>
-        <Upcoming />
-        <a style={{ color: 'black', textDecoration: 'none' }} href="/Book"><span className="imlimli idlidli" >and more.... </span></a>
       </div>
-      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br/>
+     
       <Footer />
     </div>
   )

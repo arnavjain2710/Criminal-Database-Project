@@ -1,11 +1,12 @@
 .footer{
     background-color: black;
-    margin-top: 1px;
+    margin-top: 3rem;
     font-family: 'Poppins', sans-serif;
 }
 .footercontent{
-    padding-bottom: 90px;
+    padding-bottom: 130px;
     padding-top: 50px;
+    align-items: center;
     font-family: 'Poppins', sans-serif;
     display: block;
 }

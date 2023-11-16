@@ -7,6 +7,7 @@ import Complaint from './pages/complaint'
 import NewsPage from './pages/news';
 import ComplaintState from './context/complaint/ComplaintState';
 import AuthForm from './components/login/register/login';
+import ComplaintList from './pages/ComplaintList';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
                 <Route exact path='/complaint' element={< Complaint />}></Route> 
                 <Route exact path='/news' element={< NewsPage />}></Route>
                 <Route exact path='/login' element={< AuthForm />}></Route>
+                <Route exact path='/admin' element={< ComplaintList />}></Route>
         </Routes> 
     </Router> 
     </ComplaintState>

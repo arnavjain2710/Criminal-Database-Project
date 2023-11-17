@@ -1,5 +1,21 @@
-.complaint-list{
-  margin-top: 5rem;
+.complaint-list-title-bar {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  font-weight: bold;
+  margin-top: 5.5rem;
+}
+
+.complaint-list-title {
+  flex: 1;
+  text-align: center;
+}
+
+.complaint-list {
+  display: flex;
+  flex-direction: column;
 }
 
 .complaint-card {
@@ -8,6 +24,8 @@
   padding: 10px;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
 }
 
 .complaint-card:hover {
@@ -16,8 +34,13 @@
 
 .complaint-header {
   display: flex;
+  flex-direction: row; /* Updated to row to align items side by side */
   justify-content: space-between;
-  align-items: center;
+}
+
+.complaint-header h3,
+.complaint-header p {
+  margin: 10;
 }
 
 .complaint-description {

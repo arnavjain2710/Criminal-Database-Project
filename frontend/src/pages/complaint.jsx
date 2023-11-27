@@ -4,6 +4,8 @@ import React, { useContext, useState  } from 'react';
 import Navbar from '../components/navbar/navbar';
 import Footer from '../components/footer/footer';
 import complaintContext from '../context/complaint/complaintContext';
+import "react-toastify/dist/ReactToastify.css";
+import { toast, ToastContainer } from 'react-toastify';
 
 const ComplaintForm = () => {
   const context = useContext(complaintContext)
@@ -31,14 +33,19 @@ const ComplaintForm = () => {
     event.preventDefault();
    addComplaints(Complaints.Name , Complaints.Email , Complaints.Complaint , Complaints.Category , Complaints.Severity);
     console.log('Form submitted:'  , Complaints.Name );
+    toast.success("Complaint Submited Successfully", {
+      position: toast.POSITION.TOP_CENTER
+  });
+  document.getElementById('form').reset();
   };
 
   return (
    <>
+    <ToastContainer />
     <Navbar/>
     <div className="complaint-form">
       <h2>Register a Complaint</h2>
-      <form>
+      <form id="form">
         <div className="form-group">
           <label htmlFor="name">Name:</label>
           <input

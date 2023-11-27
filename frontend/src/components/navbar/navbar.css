@@ -51,19 +51,21 @@ html {
     list-style: none;
     color: white;
     display: flex;
-    padding-left: 700px;
+    padding-left: 570px;
     margin-top: 15px;
     align-items: center;
     justify-content: center;
 }
 
 .navbarli{
+   
     text-decoration: none;
     list-style: none;
     color: white;
     font-family: 'Montserrat', sans-serif;
     padding-right: 60px;
     transition: 0.5s;
+  
     cursor: pointer;
 }
 
@@ -73,8 +75,8 @@ html {
     list-style: none;
     color:white;
     transition: 0.5s;
-    font-size: 20px;
-    font-weight: 200;
+    font-size: 18px;
+    font-weight: bold;
 }
 
 .navbari:hover{

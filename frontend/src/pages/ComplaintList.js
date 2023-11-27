@@ -1,29 +1,26 @@
 // ComplaintList.jsx
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import ComplaintCard from '../components/complaint/ComplaintCard';
 import Navbar from '../components/navbar/navbar';
 import "../components/complaint/ComplaintCard.css"
+import axios from 'axios';
 // import 
 
 const ComplaintList = () => {
-  const complaints = [
-    {
-      complainerName: 'John Doe',
-      complainerEmail: 'john.doe@example.com',
-      complaintDescription: 'This is a sample complaint description.',
-      complaintCategory: 'Service',
-      complaintSeverity: 'High',
-    },
-    {
-      complainerName: 'May Bach',
-      complainerEmail: 'may.bach@example.com',
-      complaintDescription: 'This is a sample complaint description 2.',
-      complaintCategory: 'IT',
-      complaintSeverity: 'Medium',
-    },
-  ];
 
-  const complaintFields = ['Index', 'Name', 'Email', 'Category', 'Severity'];
+  const [complaints, setComplaints]= useState([]);
+
+  useEffect(() => {
+    (async () => {
+      const result= await axios.post("http://localhost:8000/allCriminals/getcomplaint");
+      setComplaints(result.data);
+      console.log(result.data);
+    })();
+
+  }, []);
+
+
+  const complaintFields = ['Index', 'Name', 'Email', 'Category', 'Severity','Accept','Reject'];
 
   return (
     <>
@@ -37,7 +34,7 @@ const ComplaintList = () => {
       </div>
       <div className="complaint-list">
         {complaints.map((complaint, index) => (
-          <ComplaintCard key={index} index={index} {...complaint} />
+          <ComplaintCard key={index} index={index} complainerName={complaint.Name} complainerEmail={complaint.Email}  complaintDescription={complaint.Description}complaintCategory={complaint.Category} complaintSeverity={complaint.Severity} />
         ))}
       </div>
     </>

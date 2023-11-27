@@ -17,12 +17,11 @@ const ComplaintCard = ({ index, complainerName, complainerEmail, complaintDescri
         <p>{complainerEmail}</p>
         <p>{complaintCategory}</p>
         <p>{complaintSeverity}</p>
+        <p>{complaintDescription}</p>
+        <button className='Accept'>Accept</button>
+      <button className='Reject'>Decline</button>
       </div>
-      {showDescription && (
-        <div className="complaint-description">
-          <p>{complaintDescription}</p>
-        </div>
-      )}
+      
     </div>
   );
 };

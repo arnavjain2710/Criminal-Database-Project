@@ -35,7 +35,7 @@
 .complaint-header {
   display: flex;
   flex-direction: row; /* Updated to row to align items side by side */
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .complaint-header h3,
@@ -51,4 +51,29 @@
 
 .complaint-card.expanded {
   background-color: #f0f0f0;
+}
+.Accept{
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.Reject{
+  padding: 10px 20px;
+  background-color: #ff0000;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.Reject:hover{
+  padding: 10px 20px;
+  background-color: #fc3636;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }

@@ -1,7 +1,7 @@
 import React from 'react'
 import Navbar from '../components/navbar/navbar';
 import './search.css'
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Footer from '../components/footer/footer';
 import axios from "axios";
 import CriminalCard from '../components/search/searchCard';
@@ -23,6 +23,15 @@ const SearchPage = () => {
 
 
   const [criminalData , setCriminalData]=useState([]);
+
+  useEffect(() => {
+    (async () => {
+      const result= await axios.get("http://localhost:8000/allCriminals");
+      setCriminalData(result.data);
+      console.log(result.data);
+    })();
+
+  }, []);
 
   const handleSearch = async (e) => {
     e.preventDefault();
@@ -56,8 +65,8 @@ const SearchPage = () => {
               onChange={(e) => handleFilterChange('sentenceStatus', e.target.value)}
             >
               <option value="">Select Sentence Status</option>
-              <option value="Open">Incarcerated</option>
-              <option value="Closed">Released</option>
+              <option value="Open">Open</option>
+              <option value="Closed">Closed</option>
             </select>
           </div>
         </div>

@@ -4,7 +4,8 @@ import './login.css';
 import Navbar from '../../navbar/navbar';
 import Footer from '../../footer/footer';
 import { useNavigate } from "react-router-dom";
-
+import "react-toastify/dist/ReactToastify.css";
+import { toast, ToastContainer } from 'react-toastify';
 
 const AuthForm = () => {
     const [formData, setFormData] = useState({
@@ -18,7 +19,7 @@ const AuthForm = () => {
         email: '',
     });
 
-    const navigate =useNavigate();
+    const navigate = useNavigate();
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData({
@@ -31,22 +32,41 @@ const AuthForm = () => {
         e.preventDefault();
 
         if (formData.isRegistering) {
-            await axios.post("http://localhost:8000/allCriminals/register", formData).then((res) => console.log(res)).catch((err) => console.log(err));
+            await axios.post("http://localhost:8000/allCriminals/register", formData).then((res) => {
+                console.log(res)
+                toast.success("Registered Successfull", {
+                    position: toast.POSITION.TOP_CENTER
+                });
+                
+            }).catch((err) => {
+                console.log(err)
+                toast.error("Something Went Wrong, Please try again", {
+                    position: toast.POSITION.TOP_CENTER
+                });
+            });
             console.log('Registering:', formData);
+
         } else {
-            await axios.post("http://localhost:8000/allCriminals/login",formData).then((res) => {
-                setUser(res);
-                if(res.data){
-                    navigate("/admin");
+            await axios.post("http://localhost:8000/allCriminals/login", formData).then((res) => {
+                if (res.data) {
+                    setUser(res);
+                    toast.success('Login Successful', { position: toast.POSITION.TOP_CENTER });
+                    setTimeout(() => {
+                        navigate('/admin');
+                      }, 1000);
                 }
 
-            }).catch((err) => console.log(err));
-           
+            }).catch((err) => {
+                console.log(err)
+                toast.error('Something Went Wrong, Please try again', { position: toast.POSITION.TOP_CENTER });
+            });
+
         }
     };
 
     return (
         <div className="main-contain">
+             <ToastContainer />
             <Navbar />
             <div className='form-container'>
                 <h2>{formData.isRegistering ? 'Register' : 'Login'}</h2>

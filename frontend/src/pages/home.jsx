@@ -22,9 +22,7 @@ export default function Home() {
           </div> */}
         </div>
         {/* SEARCHBAR */}
-        <div> 
-          <Upcoming />
-        </div>
+        
       </div>
       <Footer />
     </div>

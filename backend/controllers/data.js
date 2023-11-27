@@ -44,6 +44,23 @@ export const regComplaint = async (req, res, next) => {
     res.status(500).json({ error: 'Failed to insert complaint' });
   }
 };
+export const getComplaint = async (req, res, next) => {
+     try{
+      const qry = "SELECT * FROM User_Complaint";
+      db.query(qry, (err, data) => {
+        if (err) {
+          console.log(err);
+        }
+        res.json(data);
+        //  console.log(data);
+      })
+     }
+     catch (error) {
+      console.error(error);
+      res.status(500).json({ error: 'Failed to get Complaint' });
+    }
+    
+};
 
 
 
